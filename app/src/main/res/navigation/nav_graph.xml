@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_journalListFragment"
+            app:destination="@id/journalListFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_addJournalFragment"
+            app:destination="@id/addJournalFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalListFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.JournalListFragment"
+        android:label="fragment_journal_list"
+        tools:layout="@layout/fragment_journal_list" >
+        <action
+            android:id="@+id/action_journalListFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_journalListFragment_to_journalDetailFragment"
+            app:destination="@id/journalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalDetailFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.JournalDetailFragment"
+        android:label="fragment_journal_detail"
+        tools:layout="@layout/fragment_journal_detail" >
+        <action
+            android:id="@+id/action_journalDetailFragment_to_journalListFragment"
+            app:destination="@id/journalListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addJournalFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.AddJournalFragment"
+        android:label="fragment_add_journal"
+        tools:layout="@layout/fragment_add_journal" >
+        <action
+            android:id="@+id/action_addJournalFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_addJournalFragment_to_addDeliveryJournalFragment"
+            app:destination="@id/addDeliveryJournalFragment" />
+        <action
+            android:id="@+id/action_addJournalFragment_to_addIntradayJournalFragment"
+            app:destination="@id/addIntradayJournalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIntradayJournalFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.AddIntradayJournalFragment"
+        android:label="fragment_add_intraday_journal"
+        tools:layout="@layout/fragment_add_intraday_journal" >
+        <action
+            android:id="@+id/action_addIntradayJournalFragment_to_addJournalFragment"
+            app:destination="@id/addJournalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDeliveryJournalFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.AddDeliveryJournalFragment"
+        android:label="fragment_add_delivery_journal"
+        tools:layout="@layout/fragment_add_delivery_journal" >
+        <action
+            android:id="@+id/action_addDeliveryJournalFragment_to_addJournalFragment"
+            app:destination="@id/addJournalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.unboxtechnicallife.tradingtoolspractice.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
